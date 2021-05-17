@@ -80,14 +80,6 @@
             margin-top: 30px;
         }
 
-        .main .main-images {
-            display: flex;
-            width: 190vh;
-            height: 70vh;
-            background-color: red;
-            border-radius: 16px;
-            overflow: hidden;
-        }
 
 
 
@@ -133,31 +125,39 @@
             display: flex;
         }
 
+        .main .main-images {
+            display: flex;
+            width: 190vh;
+            height: 70vh;
+            background-color: black;
+
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+
         .mimg1 {
-            width: 70vh;
+            width: 50vh;
             height: 100vh;
             overflow: hidden;
             position: relative;
-            transition: all 1s ease;
-            background-color: black;
+            transition: all 0.2s ease;
         }
 
         .mimg2 {
-            width: 70vh;
+            width: 50vh;
             height: 100vh;
-            background-color: black;
             overflow: hidden;
             position: relative;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
         }
 
         .mimg3 {
             width: 100vh;
             height: 100vh;
-            background-color: black;
             overflow: hidden;
             position: relative;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
         }
 
 
@@ -166,10 +166,12 @@
             width: 100vh;
             height: 70vh;
             background-image: url("strength.jpg");
-            background-position: center center;
+            background-position: center;
             background-size: cover;
+            background-repeat: no-repeat;
             object-fit: cover;
-            transition: all 1s ease;
+            position: relative;
+            transition: all 0.2s ease;
             opacity: 0.5;
 
         }
@@ -177,28 +179,32 @@
         .img2 {
             width: 100vh;
             height: 70vh;
+            position: relative;
             background-image: url("mobility.jpg");
-            background-position: center center;
+            background-position: center;
+            background-repeat: no-repeat;
             object-fit: cover;
             background-size: cover;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
             opacity: 0.5;
         }
 
         .img3 {
             width: 100vh;
             height: 100vh;
+            position: relative;
+            background-repeat: no-repeat;
             background-image: url("drills.jpg");
-            background-position: center center;
+            background-position: center;
             background-size: cover;
             object-fit: cover;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
             opacity: 0.5;
         }
 
         .mimg1:hover .img1 {
             z-index: 2;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
             transform: scale(1.2, 1.2);
             transform-origin: center;
             box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.1), 0 6px 20px 0 rgba(255, 0, 0, 0.01);
@@ -206,7 +212,7 @@
 
         .mimg2:hover .img2 {
             z-index: 2;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
             transform: scale(1.2, 1.2);
             transform-origin: center;
             box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.1), 0 6px 20px 0 rgba(255, 0, 0, 0.01);
@@ -214,41 +220,35 @@
 
         .mimg3:hover .img3 {
             z-index: 2;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
             transform: scale(1.2, 1.2);
             transform-origin: center;
             box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.1), 0 6px 20px 0 rgba(255, 0, 0, 0.01);
         }
 
         .mimg1:hover {
-            width: 100%;
+            width: 100vh;
             height: 100%;
-            background-color: black;
             overflow: hidden;
             position: relative;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
         }
 
         .mimg2:hover {
-            width: 110%;
+            width: 100vh;
             height: 100%;
-            background-color: black;
             overflow: hidden;
             position: relative;
-            transition: all 1s ease;
+            transition: all 0.2s ease;
         }
 
-        .mimg1:hover .mimg2,
-        .mimg2:hover .mimg1,
-        .mimg3:hover .mimg1,
-        .mimg3:hover .mimg2 {
-            width: 10vh;
-            height: 100vh;
-        }
-
-        .mimg1:hover .mimg3,
-        .mimg2:hover .mimg3 {
-            width: 0vh;
+        .mimg1:hover~.mimg2,
+        .mimg2:hover~.mimg1,
+        .mimg3:hover~.mimg1,
+        .mimg3:hover~.mimg2,
+        .mimg1:hover~.mimg3,
+        .mimg2:hover~.mimg3 {
+            width: 50vh;
             height: 100vh;
         }
     </style>
