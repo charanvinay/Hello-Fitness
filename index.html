@@ -163,23 +163,23 @@
 
 
         .img1 {
-            width: 70vh;
+            width: 100vh;
             height: 70vh;
             background-image: url("strength.jpg");
-            background-repeat: no-repeat;
+            background-position: center center;
             background-size: cover;
-            background-position: center;
+            object-fit: cover;
             transition: all 1s ease;
             opacity: 0.5;
 
         }
 
         .img2 {
-            width: 70vh;
+            width: 100vh;
             height: 70vh;
             background-image: url("mobility.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
+            background-position: center center;
+            object-fit: cover;
             background-size: cover;
             transition: all 1s ease;
             opacity: 0.5;
@@ -187,38 +187,51 @@
 
         .img3 {
             width: 100vh;
-            height: 70vh;
-            background: url("drills.jpg");
-            background-repeat: no-repeat;
+            height: 100vh;
+            background-image: url("drills.jpg");
+            background-position: center center;
             background-size: cover;
-            background-position: center;
+            object-fit: cover;
             transition: all 1s ease;
             opacity: 0.5;
         }
 
         .mimg1:hover .img1 {
-            z-index: 7;
+            z-index: 2;
             transition: all 1s ease;
-            transform: scale(1.2);
+            transform: scale(1.2, 1.2);
+            transform-origin: center;
+            box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.1), 0 6px 20px 0 rgba(255, 0, 0, 0.01);
         }
 
         .mimg2:hover .img2 {
-            z-index: 7;
+            z-index: 2;
             transition: all 1s ease;
-            transform: scale(1.2);
+            transform: scale(1.2, 1.2);
+            transform-origin: center;
+            box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.1), 0 6px 20px 0 rgba(255, 0, 0, 0.01);
         }
 
         .mimg3:hover .img3 {
-            z-index: 7;
+            z-index: 2;
             transition: all 1s ease;
-            transform: scale(1.2);
+            transform: scale(1.2, 1.2);
+            transform-origin: center;
+            box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.1), 0 6px 20px 0 rgba(255, 0, 0, 0.01);
         }
 
-        .mimg1:hover,
-        .mimg2:hover,
-        .mimg3:hover {
-            width: 100vh;
-            height: 100vh;
+        .mimg1:hover {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+            transition: all 1s ease;
+        }
+
+        .mimg2:hover {
+            width: 110%;
+            height: 100%;
             background-color: black;
             overflow: hidden;
             position: relative;
@@ -226,12 +239,16 @@
         }
 
         .mimg1:hover .mimg2,
-        .mimg1:hover .mimg3,
         .mimg2:hover .mimg1,
-        .mimg2:hover .mimg3,
         .mimg3:hover .mimg1,
         .mimg3:hover .mimg2 {
             width: 10vh;
+            height: 100vh;
+        }
+
+        .mimg1:hover .mimg3,
+        .mimg2:hover .mimg3 {
+            width: 0vh;
             height: 100vh;
         }
     </style>
