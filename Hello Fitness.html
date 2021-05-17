@@ -88,14 +88,7 @@
             overflow: hidden;
         }
 
-        .mimg1 {
-            width: 25%;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-            transition: all 1s ease;
-            background-color: black;
-        }
+
 
         .mimg1 h5,
         .mimg2 h5,
@@ -137,6 +130,15 @@
         .mimg2:hover .fa-chevron-right,
         .mimg3:hover .fa-chevron-right {
             display: flex;
+        }
+
+        .mimg1 {
+            width: 25%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            transition: all 1s ease;
+            background-color: black;
         }
 
         .mimg2 {
@@ -223,12 +225,17 @@
         }
 
         .mimg1:hover .mimg2,
-        .mimg1:hover .mimg3,
         .mimg2:hover .mimg1,
         .mimg2:hover .mimg3,
         .mimg3:hover .mimg1,
         .mimg3:hover .mimg2 {
             width: 25%;
+            height: 100%;
+        }
+
+
+        .mimg1:hover .mimg3 {
+            width: 10%;
             height: 100%;
         }
     </style>
